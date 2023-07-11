@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="d-flex justify-content-center" style="font-family: system-ui;">
+    <div class="container text-blue">
+        <div class="text-center">
+            <h1 style="margin-bottom: 0;">In euismod sapien eu maximus tempus</h1>
+            <h2 class="font-normal" style="margin: 0;" id="vestibulum">Vestibulum bibendum posuere dui, in pharetra est hendrerit ac. Integer posuere metus lacus</h2>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="d-flex justify-content-space-around position-relative">
+            <h2 class="font-normal bullet transition" id="bullet1">
+                1
+            </h2>
+            
+            <span class="grey-line1"></span>
+
+            <h2 class="font-normal bullet" id="bullet2">
+                2
+                <span class="grey-line2"></span>
+            </h2>
+            <h2 class="font-normal bullet" id="bullet3">
+                3
+            </h2>
+        </div>
+        
+        <div class="container">
+            <form>
+            <div class="bg-lightgrey border-radius-10" style="padding: 0 30px; overflow: hidden;">
+            
+                <div id="progress1">
+                    <h2>About you</h2>
+
+                    <div style="padding: 0 60px 50px 60px;">
+                        <div class="d-flex">
+                            <div class="margin-right-30 width-50per">
+                                <label for="fname">First name*</label>
+                                <br>
+                                <input class=" width-100per" type="text" id="fname" required>
+                            </div>
+                            
+                            <div class="width-50per">
+                                <label for="lname">Last name*</label>
+                                <br>
+                                <input class=" width-100per" type="text" id="lname" required>
+                            </div>
+                        </div>
+
+                        <label for="email">Email Address*</label>
+                        <br>
+                        <input class=" width-100per" type="email" id="email" required>
+
+                        <label for="phone">Mobile number*</label>
+                        <br>
+                        <input class=" width-100per" type="number" id="phone" required>
+                    </div>
+                </div>
+
+                <div class="display-none" id="progress2">
+                    <h2>Your Donation</h2>
+
+                    <div style="padding: 0 60px 50px 60px;">
+                        <div class="bg-white border-radius-10">
+                            <div class="d-flex" style="white-space: nowrap;">
+                                <button class="paypal font-bold" onclick="paypal()"">Paypal</button>
+                                <button class="credit font-bold bg-white text-blue" value="credit" onclick="credit()">Credit Card</button>
+                            </div>
+
+                            <br>
+                            <!-- 7N18;31b -->
+
+                            <div style="padding: 0 60px 50px 60px;">
+                                <label for="donation">Donation Amount*</label>
+                                <br>
+                                <input class="width-50per " type="number" id="amount" required>
+
+                                <br>
+
+                                <label for="cardHolderName">Card Holder Name*</label>
+                                <br>
+                                <input class=" width-100per" type="text" id="cardHolderName" required>
+
+                                <br>
+
+                                <label for="creditNo">Credit Card No.*</label>
+                                <br>
+                                <input class=" width-100per" type="number" id="creditNo" required>
+
+                                <br>
+
+                                <label for="securityCode">Card Security Code*</label>
+                                <br>
+                                <input class="width-50per " type="number" id="securityCode" required>
+
+                                <br>
+                                <div class="d-flex">
+                                    <div class="width-50per">
+                                        <label for="expDate">Expiry Date*</label>
+                                        <br>
+                                        <input class="width-100per" type="date" id="expDate" required>
+                                    </div>
+
+                                    <div class="d-flex align-center flex-end width-50per">
+                                        <img src="visa-logo.png" alt="">
+                                        <img src="master-logo.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="display-none" id="progress3">
+                    <h2 class="font-normal">Comment Field</h2>
+
+                    <div style="padding: 0 60px 50px 60px;">
+                        <label for="donation">Your Message</label>
+                        <br>
+                        <textarea class="width-100per" type="text"></textarea>
+
+                        <br>
+
+                        <div class="d-flex align-center" style="padding-top: 10px">
+                            <input class="bg-white" type="checkbox" onclick="incognito()">
+                            <span class="text-blue">Keep me anonymous</span>    
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="display-none text-center" id="progress4">
+                    <h1 class="font-normal">
+                        <span style="font-size: 8rem;">Thank You</span>
+                        <br>
+                        <hr>
+                        For Your
+                        <br>
+                        <hr>
+                        <strong style="font-size: 6rem;">Donation</strong>
+                    </h1>
+                </div>
+            </div>
+
+            <div class="row flex-end" id="buttons">
+                <button class="display-none" onclick="previous()" id="prevButton">Back</button>
+                <button onclick="next()" id="nextButton">Next</button>
+            </div>
+
+            <div class="text-center" style="margin-top: 30px;">
+                <button class="display-none" id="backButton" onclick="refreshPage()">Back</button>
+            </div>
+            </form> 
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
